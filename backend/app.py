@@ -69,6 +69,11 @@ mqtt_client.loop_start()
 def index():
     return render_template("index.html")
 
+@app.route("/dashboard")
+def dashboard_page():
+    return render_template("dashboard.html")
+
+
 @app.route("/data", methods=["GET"])
 def get_data():
     conn = get_db_connection()
